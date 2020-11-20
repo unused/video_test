@@ -1,0 +1,16 @@
+<video data-key="<%=
+Eyeson::Room.join(
+  id: '59X4wRwESzXxk2',
+  name: 'Test 1',
+  user: {
+    id: SecureRandom.uuid,
+    name: Faker::Name.name,
+    avatar: Faker::Avatar.image
+  },
+  options: {
+    recording_available: false,
+    broadcast_available: false,
+    exit_url: "http://vm.com:3000/"
+  }
+ ).access_key
+ %>"></video>
