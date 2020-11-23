@@ -1,4 +1,1 @@
-class ApplicationController < ActionController::Base
-    def room
-    end
-end
+class ApplicationController < ActionController::Base; end

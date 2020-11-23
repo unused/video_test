@@ -20,6 +20,6 @@ eyeson.onEvent(event => {
   video.play();
 });
 
-document.querySelector('button').addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function(event) {
   eyeson.start(document.querySelector("video").dataset.key);
 });
