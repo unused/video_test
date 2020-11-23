@@ -1,24 +1,11 @@
-# README
+# Video Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A ruby on rails test application using [eyeson](https://www.eyeson.com/) services.
 
-Things you may want to cover:
+```sh
+$ cat .ruby-version # display required ruby version
+$ EYESON_API_KEY=... bin/rails server # start local development webserver, visit http://localhost:3000
+```
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+NOTE: eyeson is based on WebRTC so you require to use HTTPS for your
+application or HTTP and `localhost` for development.
