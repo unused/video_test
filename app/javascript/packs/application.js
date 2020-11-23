@@ -10,19 +10,16 @@ require("channels")
 
 import eyeson, { StreamHelpers } from 'eyeson';
 
-
 eyeson.onEvent(event => {
-    if (event.type !== "accept") {
-        return;
-    }
-    // Note: Some iOS devices might require video to have autoplay attribute set.
-    let video = document.querySelector("video");
-    video.srcObject = event.remoteStream;
-    video.play();
+  if (event.type !== "accept") {
+    return;
+  }
+  // Note: Some iOS devices might require video to have autoplay attribute set.
+  let video = document.querySelector("video");
+  video.srcObject = event.remoteStream;
+  video.play();
 });
 
-document.addEventListener('DOMContentLoaded', function(event) {
-    console.log("In");
-    console.log(document.querySelector("video").dataset.key);
-    eyeson.start(document.querySelector("video").dataset.key);
+document.querySelector('button').addEventListener('click', function() {
+  eyeson.start(document.querySelector("video").dataset.key);
 });
